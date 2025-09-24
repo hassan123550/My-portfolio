@@ -19,11 +19,19 @@ const Skill = () => {
             <div className="container mx-auto"> 
                 
             
-           <h2 className="mb-4 text-center sm:text-center block w-full 
+           {/* <h2 className="mb-4 text-center sm:text-center block w-full 
                    text-3xl sm:text-4xl md:text-5xl font-extrabold 
                    tracking-tight mx-auto">
         I Use Professional Tools
+    </h2> */}
+
+
+                   <h2 className="mb-4 text-center sm:text-left block w-full 
+                   text-3xl sm:text-4xl md:text-5xl font-extrabold 
+                   tracking-tight mx-auto sm:mx-0">
+        I Use Professional Tools
     </h2>
+
 
                 <p className="text-zinc-400 mb-10 max-w-2xl text-center sm:text-center mx-auto sm:mx-auto">
                     I'm Hassan, a skilled developer crafting exceptional websites and mobile apps using modern tools and technologies.

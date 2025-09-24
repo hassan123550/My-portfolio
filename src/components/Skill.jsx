@@ -21,17 +21,17 @@ const Skill = () => {
             <div className="container mx-auto"> 
                 
 
-        <h2
+<h2
   className="mb-4 text-center sm:text-left w-full 
              text-2xl sm:text-3xl md:text-4xl lg:text-5xl 
-             font-extrabold tracking-tight leading-snug"
+             font-extrabold tracking-tight leading-snug max-w-2xl mx-auto sm:mx-0"
 >
   I Use Professional Tools
 </h2>
 
 <p
-  className="text-zinc-400 mb-10 max-w-xl text-center sm:text-left 
-             mx-auto sm:mx-0 text-base sm:text-lg leading-relaxed"
+  className="text-zinc-400 mb-10 text-center sm:text-left 
+             max-w-2xl mx-auto sm:mx-0 text-base sm:text-lg leading-relaxed"
 >
   I'm Hassan, a skilled developer crafting exceptional websites and mobile apps using modern tools and technologies.
   From design to deployment, I deliver high-performance digital experiences that stand out.

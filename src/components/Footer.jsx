@@ -171,7 +171,7 @@ const Footer = () => {
     { label: 'GitHub', href: 'https://github.com/hassan123550' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/hassan-randhawa' },
     { label: 'Twitter X', href: 'https://x.com/HassanA70781' },
-    { label: 'WhatsApp', href: 'https://wa.me/923296704691?text=Hi%20Hassan%2C%20I%20am%20interested%20in%20working%20with%20you!' },
+    { label: 'WhatsApp', href: 'https://wa.me/923196210105?text=Hi%20Hassan%2C%20I%20am%20interested%20in%20working%20with%20you!' },
   ];
 
   return (

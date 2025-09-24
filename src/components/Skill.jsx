@@ -45,7 +45,7 @@ const Skill = () => {
 
 
                 <h2
-  className="mb-4 text-left w-full 
+  className=" headline-2 mb-4 text-left w-full 
              text-2xl sm:text-3xl md:text-4xl lg:text-5xl 
              font-extrabold tracking-tight leading-snug 
              max-w-3xl pl-2 sm:pl-4 md:pl-8"

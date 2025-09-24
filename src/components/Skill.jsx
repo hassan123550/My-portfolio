@@ -81,7 +81,6 @@
 
 
 
-
 import React from 'react';
 import SkillCard from './SkillCard';
 
@@ -104,18 +103,16 @@ const Skill = () => {
             {/* 'mx-auto' centers the content block on all screen sizes */}
             <div className="container mx-auto"> 
                 
-                {/* 🌟 FINAL ALIGNMENT FIX 🌟
-                   - text-center: Mobile par center.
-                   - sm:text-left, sm:mx-0, sm:px-0: Tablet/Desktop par left-align (paragraph ke equal). 
-                */}
+                {/* 🌟 FINAL FIX: Left-aligns on sm screens and above, remains centered on mobile. 
+                   'sm:pl-0' ensures no left padding pushes it right of the paragraph on desktop. 🌟 */}
                 <h2 className="mb-4 text-center sm:text-left block w-full
                                text-3xl sm:text-4xl md:text-5xl font-extrabold 
-                               tracking-tight mx-auto sm:mx-0 sm:px-0">
+                               tracking-tight mx-auto sm:mx-0 sm:pl-0 sm:pr-0">
                     I Use Professional Tools
                 </h2>
 
                 {/* Paragraph ko bhi same left-alignment fix di gayi hai */}
-                <p className="text-zinc-400 mb-10 max-w-2xl text-center sm:text-left mx-auto sm:mx-0 sm:px-0">
+                <p className="text-zinc-400 mb-10 max-w-2xl text-center sm:text-left mx-auto sm:mx-0 sm:pl-0 sm:pr-0">
                     I'm Hassan, a skilled developer crafting exceptional websites and mobile apps using modern tools and technologies.
                     From design to deployment, I deliver high-performance digital experiences that stand out.
                 </p>

@@ -36,7 +36,7 @@ const Skill = () => {
 
                       <h2 className="mb-4 text-center sm:text-left block w-full
                            text-3xl sm:text-4xl md:text-5xl font-extrabold 
-                           tracking-tight mx-auto sm:mx-0 sm:px-0">
+                           tracking-tight mx-auto sm:mx-0 sm:px-0 ml:10 ">
                 I Use Professional Tools
             </h2>
 

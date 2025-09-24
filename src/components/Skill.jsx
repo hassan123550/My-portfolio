@@ -54,7 +54,7 @@ const Skill = () => {
 </h2>
 
 <p
-  className="text-zinc-400 mb-10 text-left 
+  className=" headline-2 text-zinc-400 mb-10 text-left 
              max-w-3xl text-base sm:text-lg leading-relaxed 
              pl-2 sm:pl-4 md:pl-8"
 >

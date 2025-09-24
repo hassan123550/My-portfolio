@@ -108,7 +108,6 @@
 
 
 
-
 import React from 'react';
 import SkillCard from './SkillCard';
 
@@ -125,21 +124,22 @@ const Skill = () => {
   ];
 
   return (
+    // Responsive padding applied: py-12 for vertical, px-4/sm:px-6/lg:px-12 for horizontal
     <section className="section py-12 px-4 sm:px-6 lg:px-12">
       <div className="container mx-auto">
-
-          
+        
+        {/* Responsive text alignment: Centered on mobile, left-aligned on sm and up */}
         <h2 className="headline-2 mb-4 text-center sm:text-left">
           I Use Professional Tools
         </h2>
 
-     
+        {/* Responsive text alignment and max width for readability */}
         <p className="text-zinc-400 mb-10 max-w-2xl text-center sm:text-left mx-auto sm:mx-0">
           I'm Hassan, a skilled developer crafting exceptional websites and mobile apps using modern tools and technologies.
           From design to deployment, I deliver high-performance digital experiences that stand out.
         </p>
 
-    
+        {/* The responsive grid handles the layout on all screen sizes */}
         <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {skillItem.map(({ imgSrc, label, desc }, key) => (
             <SkillCard

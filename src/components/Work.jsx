@@ -48,9 +48,16 @@ const Work = () => {
    className="section">
    <div className="container">
     
-    <h2 className="headline-2">
-        My portfolio highlights
-    </h2>
+<h2
+  className="
+    text-left 
+    text-2xl sm:text-3xl md:text-4xl lg:text-5xl 
+    font-extrabold tracking-tight leading-snug 
+    ml-3 sm:ml-6 md:ml-10
+  ">
+  My Portfolio Highlights
+</h2>
+
 
 <div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))] m-10">
     

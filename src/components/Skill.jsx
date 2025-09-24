@@ -19,7 +19,7 @@ const Skill = () => {
             <div className="container mx-auto"> 
                 
             
-                <h2 className="headline-2 mb-4 text-center sm:text-center block w-full">
+                <h2 className="mb-4 text-center sm:text-center block w-full text-3xl md:text-4xl font-bold">
         I Use Professional Tools
     </h2>
 

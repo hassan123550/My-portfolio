@@ -53,7 +53,7 @@ const Work = () => {
     text-left 
     text-2xl sm:text-3xl md:text-4xl lg:text-5xl 
     font-extrabold tracking-tight leading-snug 
-    ml-3 sm:ml-6 md:ml-10
+    ml-6 sm:ml-6 md:ml-10
   ">
   My Portfolio Highlights
 </h2>

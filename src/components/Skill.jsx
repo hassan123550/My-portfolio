@@ -35,7 +35,7 @@ const Skill = () => {
 <p
   className="text-zinc-400 mb-10 text-left 
              max-w-3xl text-base sm:text-lg leading-relaxed 
-             pl-2 sm:pl-4 md:pl-8 lg:ml-10"
+             pl-2 sm:pl-4 md:pl-8 lg:ml-6"
 >
   I'm Hassan, a skilled developer crafting exceptional websites and mobile apps using modern tools and technologies.
   From design to deployment, I deliver high-performance digital experiences that stand out.

@@ -26,94 +26,47 @@
 
 
 
-import { useEffect } from 'react';
-import { useRef } from 'react';
+import { useState } from 'react';
 
-const Navbar = ({ navOpen }) => {
-
-  const lastActiveLink = useRef();
-  const activeBox = useRef();
-
-const initActiveBox = () => {
-
-    activeBox.current.style.top = lastActiveLink.current.offsetTop + 'px';
-    activeBox.current.style.left = lastActiveLink.current.offsetLeft + 'px';
-    activeBox.current.style.width = lastActiveLink.current.offsetWidth + 'px';
-    activeBox.current.style.height = lastActiveLink.current.offsetHeight + 'px';
-  
-};
-
-
-  useEffect(() => {
-    initActiveBox();
-  });
-  window.addEventListener('resize', initActiveBox);
-
-  const activeCurrentLink = (event) => {
-
-    lastActiveLink.current?.classList.remove('active');
-    event.target.classList.add('active');
-    lastActiveLink.current = event.target;
-
-    
-        activeBox.current.style.top = event.target.offsetTop + 'px';
-    activeBox.current.style.left = event.target.offsetLeft + 'px';
-    activeBox.current.style.width = event.target.offsetWidth + 'px';
-    activeBox.current.style.height = event.target.offsetHeight + 'px';
-
-  }
+const Navbar = ({ navOpen, closeNav }) => {
+  const [activeLink, setActiveLink] = useState('#home');
 
   const navItems = [
-    {
-      label: 'Home',
-      link: '#home',
-      className: 'nav-link active',
-      ref: lastActiveLink
-    },
-    {
-      label: 'About',
-      link: '#about',
-      className: 'nav-link'
-    },
-    {
-      label: 'Work',
-      link: '#work',
-      className: 'nav-link'
-    },
-    {
-      label: 'Reviews',
-      link: '#reviews',
-      className: 'nav-link'
-    },
-    {
-      label: 'Contact',
-      link: '#contact',
-      className: 'nav-link md:hidden'
-    }
+    { label: 'Home', link: '#home' },
+    { label: 'About', link: '#about' },
+    { label: 'Skills', link: '#skills' },
+    { label: 'Work', link: '#work' },
+    { label: 'Reviews', link: '#reviews' },
+    { label: 'Contact', link: '#contact' }
   ];
 
+  const handleClick = (link) => {
+    setActiveLink(link);
+    if (closeNav) closeNav();
+  };
 
   return (
     <nav className={`navbar ${navOpen ? 'active' : ''}`}>
-      {navItems.map(({ label, link, className, ref }, key) => (
-        <a
-          key={key}
-          href={link}
-          ref={ref}
-          className={className}
-          onClick={activeCurrentLink}
-        >
-          {label}
-        </a>
-      ))}
-
-
-      <div className='active-box'
-        ref={activeBox}>
-
+      <div className="flex flex-col md:flex-row items-center gap-1 bg-zinc-900/90 backdrop-blur-xl p-1.5 rounded-2xl border border-zinc-800 shadow-lg">
+        {navItems.map(({ label, link }) => {
+          const isActive = activeLink === link;
+          return (
+            <a
+              key={link}
+              href={link}
+              onClick={() => handleClick(link)}
+              className={`relative px-4 py-2 text-sm font-medium rounded-xl transition-all duration-300 ${
+                isActive 
+                  ? 'text-cyan-400 font-semibold bg-cyan-500/10 border border-cyan-500/30 shadow-sm shadow-cyan-500/10' 
+                  : 'text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800/50 border border-transparent'
+              }`}
+            >
+              {label}
+            </a>
+          );
+        })}
       </div>
     </nav>
-
   );
 };
 

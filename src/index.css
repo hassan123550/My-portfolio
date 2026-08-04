@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes loadingProgress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
 
 
 
@@ -11,20 +25,15 @@ html {
 }
 
 body {
-  @apply bg-zinc-900 text-zinc-50 min-h-screen;
+  @apply bg-zinc-950 text-zinc-100 min-h-screen;
 }
 .img-box {
-  @apply bg-zinc-700 overflow-hidden
+  @apply bg-zinc-800 overflow-hidden;
 }
 
 .img-cover {
-  @apply w-full h-full object-cover
+  @apply w-full h-full object-cover;
 }
-
-/* .sort-btn {
-  @apply w-10 h-10 grid place-items-center bg-zinc-50/10 rounded-xl ring-inset ring-1 ring-zinc-50/[0.02] backdrop-blur-2xl hover:bg-zinc-50/15 transition-[transform, shadow] active:scale-90
-} */
-
 
 .sort-btn {
   @apply w-10 h-10 grid place-items-center bg-zinc-50/10 rounded-xl
@@ -32,105 +41,80 @@ body {
          hover:bg-zinc-50/15 transition-transform shadow-md active:scale-90;
 }
 
-
-
-/* .navbar {
-  @apply absolute top-full mt-2 right-0 min-w-40 p-2 bg-zinc-50/10 rounded-2xl ring-inset ring-1 ring-zinc-50/5 scale-90 isolate blur-sm opacity-0 invisible transition-[opacity, transform, filter] md:static md:flex md:items-center md:mt-0 md:opacity-100 md:blur-0 md:visible md:scale-100 backdrop-blur-2xl
-} */
-
 .navbar {
-  @apply absolute top-full mt-2 right-0 min-w-40 p-2 bg-zinc-50/10 rounded-2xl
-         ring-inset ring-1 ring-zinc-50/5 scale-90 isolate blur-sm opacity-0 invisible
+  @apply absolute top-full mt-2 right-0 min-w-40 scale-90 opacity-0 invisible
          transition-all duration-300 ease-in-out
-         md:static md:flex md:items-center md:mt-0 md:opacity-100 md:blur-0 md:visible md:scale-100 backdrop-blur-2xl;
+         md:static md:flex md:items-center md:mt-0 md:opacity-100 md:visible md:scale-100;
 }
 
 .navbar.active {
-  @apply opacity-100 scale-100 blur-0 visible
+  @apply opacity-100 scale-100 blur-0 visible;
 }
 
 .nav-link {
-  @apply grid items-center h-9 px-4 text-sm font-medium tracking-wide text-zinc-50/50 hover:text-zinc-50 transition-colors
+  @apply grid items-center h-9 px-4 text-sm font-medium tracking-wide text-zinc-400 hover:text-zinc-100 transition-colors;
 }
 
 .nav-link.active {
-  @apply text-zinc-900 duration-500
+  @apply text-cyan-400 font-semibold duration-500;
 }
-
-/* .navbar .active-box {
-  @apply absolute bg-zinc-50 rounded-lg -z-10 transition-[top, left] duration-500
-} */
 
 .navbar .active-box {
-  @apply absolute bg-cyan-300 rounded-lg -z-10 transition-all duration-500;
+  @apply absolute bg-cyan-500/20 rounded-lg -z-10 transition-all duration-500;
 }
 
-
-
 .btn {
-  @apply max-w-max h-9 flex items-center gap-2 px-4 rounded-xl font-medium text-sm ring-1 ring-zinc-50/5 ring-inset transition-[background-color]
+  @apply max-w-max h-9 flex items-center gap-2 px-4 rounded-xl font-medium text-sm ring-1 ring-zinc-50/5 ring-inset transition-[background-color];
 }
 
 .btn-secondary {
-  @apply bg-sky-400 text-zinc-900 active:bg-sky-400 active:scale-90
+  @apply bg-cyan-500 text-zinc-950 active:bg-cyan-400 active:scale-90;
 }
 
 .btn-outline {
-  @apply h-11 bg-zinc-800 hover:bg-zinc-700
+  @apply h-11 bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-800;
 }
 
 .btn .material-symbols-rounded {
-  @apply text-[18px]
+  @apply text-[18px];
 }
 
-
 .btn:has( .material-symbols-rounded) {
-  @apply pr-3
+  @apply pr-3;
 }
 
 .btn-primary {
-  @apply h-11 bg-green-700 hover:bg-green-700 active:scale-90
+  @apply h-11 bg-emerald-600 hover:bg-emerald-500 text-white active:scale-90;
 }
-
-.btn-outline {
-  @apply h-11 bg-zinc-800 hover:bg-zinc-700 active:scale-90
-}
-
 
 .section {
-  @apply pt-20 lg:pt-32
+  @apply pt-20 lg:pt-32;
 }
 
 .headline-2 {
-  @apply text-3xl lg:text-4xl lg:leading-tight font-semibold ml-10
+  @apply text-3xl lg:text-4xl lg:leading-tight font-semibold ml-10;
 }
-
 
 .title-1 {
-  @apply text-[22px] font-normal
+  @apply text-[22px] font-normal;
 }
-
 
 .label {
-  @apply block text-zinc-200 text-sm font-normal mb-2
+  @apply block text-zinc-200 text-sm font-normal mb-2;
 }
 
-/* .text-field {
-  @apply block outline-none w-full px-3 py-3 text-sm bg-zinc-800 rounded-xl ring-1 ring-inset ring-transparent
-  transition-shadow hover:ring-zinc-50/5 focus:ring-sky-400 focus:ring-2
-} */
 .text-field {
   @apply block outline-none w-full px-3 sm:px-4 md:px-5 py-3 sm:py-3.5 text-sm sm:text-base 
-  bg-zinc-800 rounded-xl ring-1 ring-inset ring-transparent
-  transition-shadow hover:ring-zinc-50/5 focus:ring-sky-400 focus:ring-2;
+  bg-zinc-900 text-white rounded-xl ring-1 ring-inset ring-zinc-800
+  transition-shadow hover:ring-zinc-700 focus:ring-cyan-500 focus:ring-2;
 }
 
 .text-field::placeholder {
-  @apply text-zinc-400
+  @apply text-zinc-500;
 }
 
 .reveal-up {
-  @apply translate-y-20 opacity-0
+  @apply translate-y-20 opacity-0;
 }
 /* @import "tailwindcss"; */
 

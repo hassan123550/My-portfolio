@@ -1,100 +1,47 @@
-// import React from 'react';
-// import PropTypes from 'prop-types';
-
-// const SkillCard = ({
-//     imgSrc,
-//     label,
-//     desc,
-//     classes
-// }) => {
-//   return (
-//     <div className={"flex items-center gap-3 ring-2 ring-inset ring-gray-700 rounded-2xl p-3 hover:bg-zinc-800 transition-colors group" + classes}>
-
-
-//         <figure className="bg-gray-500 rounded-lg overflow-hidden w-12 h-12 p-2 group-hover:bg-zinc-900
-//         transition-colors">
-          
-//          <img 
-//          src={imgSrc}
-//          width={32}
-//          height={32}
-//          alt={label}
-//          />
-
-//         </figure>
-
-// <div className="">
-//    <h3>{label}</h3>
-
-//    <p className="text-zinc-400 text-sm">{desc}</p>
-// </div>
-
-
-//     </div>
-//   );
-// };
-
-
-// SkillCard.propTypes= {
-//     imgSrc:PropTypes.string.isRequired,
-//     label: PropTypes.string.isRequired,
-//     desc:PropTypes.string.isRequired,
-//     classes:PropTypes.string
-// }
-// export default SkillCard;
-
-
-
-
-
-
-
-
-
 import React from 'react';
 import PropTypes from 'prop-types';
 
 const SkillCard = ({
-    imgSrc,
-    label,
-    desc,
-    classes
+  icon: Icon,
+  imgSrc,
+  label,
+  desc,
+  colorClass = 'text-cyan-600',
+  bgClass = 'bg-cyan-50 border-cyan-200'
 }) => {
   return (
-    // Adjusting padding: p-3 (mobile) increases to sm:p-4 (tablet/desktop)
-    <div className={`flex items-center gap-3 ring-2 ring-inset ring-gray-700 rounded-2xl p-3 sm:p-4 hover:bg-zinc-800 transition-colors group ${classes}`}>
+    <div className="flex items-center gap-4 bg-zinc-900/80 border border-zinc-800 hover:border-cyan-500/40 p-4 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-cyan-500/5 group shadow-md backdrop-blur-xl">
+      
+      {/* Icon or Image container */}
+      <div className={`w-12 h-12 rounded-xl border flex items-center justify-center shrink-0 ${bgClass} transition-transform group-hover:scale-110 duration-300`}>
+        {Icon ? (
+          <Icon className={`text-2xl ${colorClass}`} />
+        ) : (
+          <img src={imgSrc} alt={label} className="w-7 h-7 object-contain" />
+        )}
+      </div>
 
-        {/* The figure is fixed size (w-12 h-12) which is usually good for icons */}
-        <figure className="bg-gray-500 rounded-lg overflow-hidden w-12 h-12 p-2 group-hover:bg-zinc-900
-        transition-colors flex-shrink-0"> 
-          
-           {/* Added flex-shrink-0 to prevent the icon area from shrinking on small screens */}
-           <img 
-           src={imgSrc}
-           width={32}
-           height={32}
-           alt={label}
-           className="w-full h-full object-contain" // Ensuring the image scales within the figure
-           />
-
-        </figure>
-
-        <div className="flex-grow min-w-0"> {/* Use min-w-0 to prevent text overflow issues */}
-            <h3 className="truncate">{label}</h3> {/* Added truncate to prevent long labels from breaking the layout */}
-
-            <p className="text-zinc-400 text-sm truncate">{desc}</p>
-        </div>
-
+      {/* Label & Description */}
+      <div className="min-w-0 flex-1">
+        <h4 className="text-white font-bold text-base truncate group-hover:text-cyan-400 transition-colors">
+          {label}
+        </h4>
+        <p className="text-zinc-400 text-xs truncate mt-0.5 font-medium">
+          {desc}
+        </p>
+      </div>
 
     </div>
   );
 };
 
+SkillCard.propTypes = {
+  icon: PropTypes.elementType,
+  imgSrc: PropTypes.string,
+  label: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  colorClass: PropTypes.string,
+  bgClass: PropTypes.string
+};
 
-SkillCard.propTypes= {
-    imgSrc:PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
-    desc:PropTypes.string.isRequired,
-    classes:PropTypes.string
-}
 export default SkillCard;

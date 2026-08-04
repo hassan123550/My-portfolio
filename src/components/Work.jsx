@@ -1,80 +1,90 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ProjectCard from './ProjectCard';
-
+import ProjectModal from './ProjectModal';
+import { projectsData } from '../data/projectsData';
 
 const Work = () => {
+  const [filter, setFilter] = useState('all');
+  const [selectedProject, setSelectedProject] = useState(null);
 
-    const works = [
-  {
-    imgSrc: '/images/project-1.jpg',
-    title: 'E-Commerce App',
-    tags: ['API', 'MVC', 'Development'],
-    projectLink: 'https://github.com/hassan123550/E-Commerce-App'
-  },
-  {
-    imgSrc: '/images/project-2.jpg',
-    title: 'Food App',
-    tags: ['API', 'SPA'],
-    projectLink: 'https://github.com/hassan123550/Food-App/'
-  },
-  {
-    imgSrc: '/images/project-3.jpg',
-    title: 'React js',
-    tags: ['Development', 'API'],
-    projectLink: 'https://github.com/hassan123550/express-auth'
-  },
-  {
-    imgSrc: '/images/project-4.jpg',
-    title: 'Real state App',
-    tags: ['App-Design', 'Development'],
-    projectLink: 'https://github.com/hassan123550/Codealpha_tasks'
-  },
-  {
-    imgSrc: '/images/project-5.jpg',
-    title: 'Login-Signup-from-Formik-Yup',
-    tags: ['#Login/Signup', 'Development'],
-    projectLink: 'https://github.com/hassan123550/Login-Signup-from-Formik-Yup'
-  },
-  {
-    imgSrc: '/images/project-6.jpg',
-    title: 'Card Personal portfolio',
-    tags: ['Web-design', 'Development'],
-    projectLink: 'https://github.com/hassan123550/Card-React-js-Props-TailwindCss'
-  },
-];
+  const filteredProjects = filter === 'all'
+    ? projectsData
+    : projectsData.filter((p) => p.categoryFilter === filter);
+
   return (
-   <section 
-   id="work"
-   className="section">
-   <div className="container">
-    
-<h2
-  className="
-    text-left 
-    text-2xl sm:text-3xl md:text-4xl lg:text-5xl 
-    font-extrabold tracking-tight leading-snug 
-    ml-6 sm:ml-6 md:ml-10
-  ">
-  My Portfolio Highlights
-</h2>
+    <section id="work" className="py-24 bg-zinc-950 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div>
+            <h2 className="text-sm sm:text-base font-extrabold uppercase tracking-widest text-cyan-400 mb-2">
+              Featured Projects & UI/UX
+            </h2>
+            <h3 className="font-display text-lg sm:text-xl font-semibold text-white tracking-tight">
+              Selected Projects & App Designs
+            </h3>
+            <p className="text-zinc-400 text-sm sm:text-base mt-2 max-w-2xl">
+              Showcase of primary React Native CLI, Firebase & REST API applications with video walkthroughs, alongside modern UI/UX mobile and web application designs.
+            </p>
+          </div>
 
+          {/* Filter Pills */}
+          <div className="flex flex-wrap gap-2.5 shrink-0">
+            <button
+              onClick={() => setFilter('all')}
+              className={`px-4 py-2 text-xs font-bold rounded-xl transition-all duration-200 ${
+                filter === 'all'
+                  ? 'bg-gradient-to-r from-cyan-500 to-emerald-500 text-zinc-950 shadow-md shadow-cyan-500/20'
+                  : 'bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800'
+              }`}
+            >
+              All Works ({projectsData.length})
+            </button>
+            <button
+              onClick={() => setFilter('mobile')}
+              className={`px-4 py-2 text-xs font-bold rounded-xl transition-all duration-200 ${
+                filter === 'mobile'
+                  ? 'bg-gradient-to-r from-cyan-500 to-emerald-500 text-zinc-950 shadow-md shadow-cyan-500/20'
+                  : 'bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800'
+              }`}
+            >
+              React Native ({projectsData.filter(p => p.categoryFilter === 'mobile').length})
+            </button>
+            <button
+              onClick={() => setFilter('uiux')}
+              className={`px-4 py-2 text-xs font-bold rounded-xl transition-all duration-200 ${
+                filter === 'uiux'
+                  ? 'bg-gradient-to-r from-cyan-500 to-emerald-500 text-zinc-950 shadow-md shadow-cyan-500/20'
+                  : 'bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800'
+              }`}
+            >
+              UI/UX App Designs ({projectsData.filter(p => p.categoryFilter === 'uiux').length})
+            </button>
+          </div>
+        </div>
 
-<div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))] m-10">
-    
-{works.map(({imgSrc,title,tags,projectLink }, key) => 
-     <ProjectCard 
-     key={key}
-     imgSrc={imgSrc}
-     title={title}
-     tags={tags}
-     projectLink={projectLink}
-     />
-)}
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredProjects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              onSelectProject={(proj) => setSelectedProject(proj)}
+            />
+          ))}
+        </div>
 
-</div>
+      </div>
 
-   </div>
-   </section>
+      {/* Project Case Study Lightbox Modal */}
+      {selectedProject && (
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
+    </section>
   );
 };
 

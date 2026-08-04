@@ -1,152 +1,51 @@
-// import React from 'react';
-// import PropTypes from 'prop-types';
-
-// const ratings = new Array(5);
-// ratings.fill({
-//     icon:'star',
-//     style: {fontVariationSettings: '"Fill" 1'}
-// });
-
-// console.log(ratings);
-
-
-// const ReviewCard = ({
-//     content,
-//     imgSrc,
-//     name,
-//     company
-// }) => {
-//   return (
-//   <div className="relative rounded-2xl max-w-sm mx-auto p-4 bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/5 transition-colors">
-
-// <div className="flex flex-wrap items-center gap-2">
-
-// {ratings.map(({icon,style}, key) => 
-// <span
-//     key={key}
-//     className="material-icons text-yellow-300 text-[18px]"
-//     style={style}
-//     >
-
-// {icon}
-// </span>
-// )}
-
-// </div>
-
-
-// <p className="text-zinc-400 mb-8">
-//     {content}
-// </p>
-
-
-// <div className="flex items-center gap-5 mt-auto">
-
-// <figure className="img-box aspect-square rounded-lg">
-
-// <img 
-// src={imgSrc}
-//  alt={name}
-//  width={44}
-//  height={44}
-//  loading='lazy'
-//   className="img-cover rounded-2xl" />
-
-// </figure>
-
-// <div>
-//     <p className='font-semibold'>{name}</p>
-
-//     <p className="text-xs text-zinc-400 tracking-wider">
-//         {company}
-//     </p>
-// </div>
-
-
-// </div>
-
-//   </div>
-//   );
-
-// };
-
-
-// ReviewCard.propTypes = {
-
-//     content:  PropTypes.string.isRequired,
-//     imgSrc: PropTypes.string.isRequired,
-//     name: PropTypes.string.isRequired,
-//     compant: PropTypes.string.isRequired,
-
-// }
-
-
-// export default ReviewCard;
-
-
-
-
-
-
-
-
-
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FaStar } from 'react-icons/fa';
 
-// Create a fresh array for each star
-const ratings = Array.from({ length: 5 }, () => ({
-  icon: 'star',
-  style: { fontVariationSettings: '"FILL" 1' },
-}));
+const ReviewCard = ({ content, name, company }) => {
+  const getInitial = (n) => (n ? n.charAt(0).toUpperCase() : 'U');
 
-const ReviewCard = ({ content, imgSrc, name, company }) => {
   return (
-    <div className="relative w-full max-w-sm p-4 md:p-6 rounded-2xl bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/5 transition-colors">
+    <div className="flex flex-col justify-between p-6 rounded-3xl bg-zinc-900/80 border border-zinc-800 hover:border-cyan-500/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/5 group shadow-md backdrop-blur-xl">
       
-      {/* Rating Stars */}
-      <div className="flex flex-wrap items-center gap-1 mb-3">
-        {ratings.map(({ icon, style }, key) => (
-          <span
-            key={key}
-            className="material-icons text-yellow-300 text-[18px]"
-            style={style}
-          >
-            {icon}
-          </span>
-        ))}
-      </div>
+      <div>
+        {/* Rating Stars */}
+        <div className="flex items-center gap-1 text-amber-400 mb-4">
+          {[...Array(5)].map((_, i) => (
+            <FaStar key={i} className="text-sm" />
+          ))}
+        </div>
 
-      {/* Review Text */}
-      <p className="text-zinc-400 mb-8">{content}</p>
+        {/* Review Text */}
+        <p className="text-zinc-300 text-sm leading-relaxed italic mb-6">
+          "{content}"
+        </p>
+      </div>
 
       {/* User Info */}
-      <div className="flex items-center gap-5 mt-auto">
-        <figure className="w-11 h-11 rounded-lg overflow-hidden">
-          <img
-            src={imgSrc}
-            alt={name}
-            width={44}
-            height={44}
-            loading="lazy"
-            className="w-full h-full object-cover rounded-lg"
-          />
-        </figure>
+      <div className="flex items-center gap-3 pt-4 border-t border-zinc-800">
+        <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-cyan-500 to-emerald-500 text-zinc-950 font-bold text-base flex items-center justify-center shadow-lg shadow-cyan-500/20">
+          {getInitial(name)}
+        </div>
 
         <div>
-          <p className="font-semibold text-white">{name}</p>
-          <p className="text-xs text-zinc-400 tracking-wider">{company}</p>
+          <h4 className="text-white font-bold text-sm group-hover:text-cyan-400 transition-colors">
+            {name}
+          </h4>
+          <p className="text-zinc-400 text-xs font-semibold">
+            {company}
+          </p>
         </div>
       </div>
+
     </div>
   );
 };
 
 ReviewCard.propTypes = {
   content: PropTypes.string.isRequired,
-  imgSrc: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  company: PropTypes.string.isRequired, // ✅ fix typo (was "compant")
+  company: PropTypes.string.isRequired,
 };
 
 export default ReviewCard;

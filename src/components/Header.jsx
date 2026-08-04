@@ -6,7 +6,7 @@ const Header = ({ onOpenCV }) => {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full h-20 flex items-center z-50 bg-zinc-950/85 backdrop-blur-xl">
+    <header className="fixed top-0 left-0 w-full h-20 flex items-center z-50 bg-zinc-950/85 backdrop-blur-xl rounded-b-2xl sm:rounded-b-3xl border-b border-zinc-800/40 shadow-lg shadow-zinc-950/50 transition-all duration-300">
       <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 flex justify-between items-center md:grid md:grid-cols-[1fr,auto,1fr]">
         
         {/* Name Brand */}

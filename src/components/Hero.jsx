@@ -5,7 +5,7 @@ const Hero = ({ onOpenCV }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <section id="home" className="pt-28 pb-16 lg:pt-36 lg:pb-24 relative overflow-hidden bg-zinc-950">
+    <section id="home" className="pt-20 pb-8 sm:pt-24 sm:pb-12 lg:pt-36 lg:pb-24 relative overflow-hidden bg-zinc-950">
       {/* Background Gradient Accents */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-cyan-500/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
       <div className="absolute top-1/3 right-10 w-[350px] h-[350px] bg-emerald-500/10 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
@@ -44,20 +44,20 @@ const Hero = ({ onOpenCV }) => {
             </p>
 
             {/* Call To Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-row items-center gap-2.5 sm:gap-4">
               <a
                 href="#work"
-                className="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-zinc-950 font-bold text-sm sm:text-base transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 flex items-center gap-2 group active:scale-95"
+                className="px-3.5 sm:px-6 py-2.5 sm:py-3.5 rounded-xl sm:rounded-2xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-zinc-950 font-bold text-xs sm:text-base transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 flex items-center gap-1.5 sm:gap-2 group active:scale-95 whitespace-nowrap"
               >
                 <span>View Featured Projects</span>
-                <HiArrowNarrowRight className="text-lg group-hover:translate-x-1 transition-transform" />
+                <HiArrowNarrowRight className="text-sm sm:text-lg group-hover:translate-x-1 transition-transform shrink-0" />
               </a>
 
               <button
                 onClick={onOpenCV}
-                className="px-6 py-3.5 rounded-2xl bg-zinc-900 hover:bg-zinc-800 text-white font-semibold text-sm sm:text-base border border-zinc-700/80 hover:border-cyan-500/50 transition-all duration-300 flex items-center gap-2 active:scale-95 shadow-md shadow-zinc-900/50 group"
+                className="px-3.5 sm:px-6 py-2.5 sm:py-3.5 rounded-xl sm:rounded-2xl bg-zinc-900 hover:bg-zinc-800 text-white font-semibold text-xs sm:text-base border border-zinc-700/80 hover:border-cyan-500/50 transition-all duration-300 flex items-center gap-1.5 sm:gap-2 active:scale-95 shadow-md shadow-zinc-900/50 group whitespace-nowrap"
               >
-                <HiEye className="text-lg text-cyan-400 group-hover:scale-110 transition-transform" />
+                <HiEye className="text-sm sm:text-lg text-cyan-400 group-hover:scale-110 transition-transform shrink-0" />
                 <span>See CV</span>
               </button>
             </div>

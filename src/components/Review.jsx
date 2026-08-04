@@ -36,7 +36,7 @@ const Review = () => {
   ];
 
   return (
-    <section id="reviews" className="py-24 bg-zinc-950 relative overflow-hidden">
+    <section id="reviews" className="py-10 sm:py-16 md:py-20 lg:py-24 bg-zinc-950 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

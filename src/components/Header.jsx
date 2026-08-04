@@ -10,13 +10,18 @@ const Header = ({ onOpenCV }) => {
       <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 flex justify-between items-center md:grid md:grid-cols-[1fr,auto,1fr]">
         
         {/* Name Brand */}
-        <a href="#home" className="flex flex-col group">
-          <span className="font-display font-bold text-lg text-white tracking-tight group-hover:text-cyan-400 transition-colors">
-            Hassan Ali
-          </span>
-          <span className="text-xs text-cyan-400 font-semibold tracking-wide">
-            React Native & REST API Developer
-          </span>
+        <a href="#home" className="flex items-center gap-3 group">
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-gradient-to-tr from-cyan-500 to-emerald-500 text-zinc-950 font-extrabold text-xs sm:text-sm flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform shrink-0">
+            HA
+          </div>
+          <div className="flex flex-col">
+            <span className="font-display font-bold text-base sm:text-lg text-white tracking-tight group-hover:text-cyan-400 transition-colors leading-tight">
+              Hassan Ali
+            </span>
+            <span className="text-[10px] sm:text-xs text-cyan-400 font-semibold tracking-wide">
+              React Native & REST API Developer
+            </span>
+          </div>
         </a>
 
         {/* Navigation */}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaGithub, FaLinkedin, FaWhatsapp, FaEnvelope, FaPaperPlane, FaPhone } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaWhatsapp, FaTwitter, FaEnvelope, FaPaperPlane, FaPhoneAlt } from 'react-icons/fa';
 import { HiCheck } from 'react-icons/hi';
 
 const Contact = () => {
@@ -19,6 +19,12 @@ const Contact = () => {
       color: 'hover:text-blue-400 border-zinc-700/80 hover:border-blue-500/40'
     },
     {
+      href: 'https://x.com/HassanA70781',
+      icon: FaTwitter,
+      label: 'Twitter',
+      color: 'hover:text-sky-400 border-zinc-700/80 hover:border-sky-500/40'
+    },
+    {
       href: 'https://wa.me/923196210105?text=Hi%20Hassan%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project!',
       icon: FaWhatsapp,
       label: 'WhatsApp',
@@ -32,7 +38,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-zinc-950 relative overflow-hidden">
+    <section id="contact" className="py-10 sm:py-16 md:py-20 lg:py-24 bg-zinc-950 relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -58,7 +64,7 @@ const Contact = () => {
             <div className="space-y-3 pt-2">
               <a
                 href="mailto:hassan123550@gmail.com"
-                className="flex items-center gap-4 p-4 rounded-2xl bg-zinc-900/80 border border-zinc-800 hover:border-cyan-500/40 transition-colors group"
+                className="flex items-center gap-4 py-2 transition-colors group"
               >
                 <div className="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 flex items-center justify-center shrink-0">
                   <FaEnvelope className="text-base" />
@@ -75,10 +81,10 @@ const Contact = () => {
                 href="https://wa.me/923196210105"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 rounded-2xl bg-zinc-900/80 border border-zinc-800 hover:border-emerald-500/40 transition-colors group"
+                className="flex items-center gap-4 py-2 transition-colors group"
               >
                 <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center justify-center shrink-0">
-                  <FaPhone className="text-base" />
+                  <FaPhoneAlt className="text-base" />
                 </div>
                 <div>
                   <span className="text-xs text-zinc-500 block font-medium">Phone & WhatsApp</span>
@@ -101,7 +107,7 @@ const Contact = () => {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-12 h-12 rounded-2xl bg-zinc-900 border text-zinc-300 ${color} flex items-center justify-center text-xl transition-all duration-300 hover:scale-105 shadow-md`}
+                    className={`w-11 h-11 rounded-xl bg-zinc-900/60 border border-zinc-800 text-zinc-300 ${color} flex items-center justify-center text-lg transition-all duration-300 hover:scale-105`}
                     aria-label={label}
                   >
                     <Icon />
@@ -114,10 +120,10 @@ const Contact = () => {
 
           {/* RIGHT COLUMN: CONTACT FORM */}
           <div className="lg:col-span-7">
-            <div className="rounded-3xl p-8 sm:p-10 bg-zinc-900/80 border border-zinc-800 backdrop-blur-xl shadow-2xl">
+            <div className="py-2">
               
               <h4 className="text-xl font-bold text-white mb-6">
-                Send A Message
+                Send a Message
               </h4>
 
               {submitted && (

@@ -193,15 +193,21 @@ const ProjectModal = ({ project, onClose }) => {
 
         {/* Modal Footer Actions */}
         <div className="p-6 bg-zinc-950 border-t border-zinc-800 flex items-center justify-between shrink-0">
-          <a
-            href={project.projectLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-5 py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-bold text-sm border border-zinc-700 flex items-center gap-2 transition-all"
-          >
-            <FaGithub className="text-lg" />
-            <span>Source Code on GitHub</span>
-          </a>
+          {project.projectLink ? (
+            <a
+              href={project.projectLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-bold text-sm border border-zinc-700 flex items-center gap-2 transition-all"
+            >
+              <FaGithub className="text-lg" />
+              <span>Source Code on GitHub</span>
+            </a>
+          ) : (
+            <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-zinc-900 border border-zinc-800 text-cyan-400 text-xs font-semibold">
+              <span>Figma UI/UX Mobile App Design Showcase</span>
+            </div>
+          )}
 
           <button
             onClick={onClose}

@@ -125,6 +125,94 @@ export const projectsData = [
     ]
   },
   {
+    "id": "travel-app-ui",
+    "title": "Travel App UI/UX - Mobile App Design",
+    "category": "UI/UX Mobile",
+    "categoryFilter": "uiux",
+    "subtitle": "Figma Android Mobile UI/UX Design for Travel & Exploration",
+    "description": "A sleek Figma mobile app UI/UX design suite for travel discovery and destination exploration. Features glassmorphic cards, destination details, flight seat selection, digital QR boarding pass, and traveler bucket list management.",
+    "tags": [
+      "Figma UI/UX",
+      "Android App Design",
+      "Mobile Layout",
+      "Glassmorphism",
+      "Figma Prototype"
+    ],
+    "posterImg": "/assets/images/travel_app_screen1.jpg",
+    "images": [
+      "/assets/images/travel_app_screen1.jpg",
+      "/assets/images/travel_app_screen2.jpg",
+      "/assets/images/travel_app_screen3.jpg",
+      "/assets/images/travel_app_screen4.jpg",
+      "/assets/images/travel_app_screen5.jpg"
+    ],
+    "highlights": [
+      "5 High-Fidelity Figma Mobile App UI Screens",
+      "Glassmorphic destination search & category carousel",
+      "Flight seat booking map & passenger details UI",
+      "Digital boarding pass ticket with QR code status timeline"
+    ]
+  },
+  {
+    "id": "food-app-ui",
+    "title": "Food App UI/UX - Mobile App Design",
+    "category": "UI/UX Mobile",
+    "categoryFilter": "uiux",
+    "subtitle": "Figma Android Mobile UI/UX Design for Food Delivery & Restaurants",
+    "description": "Comprehensive Figma mobile app UI/UX design for a food delivery & restaurant platform. Includes gourmet dish selector, food item customization modal, shopping cart checkout flow, real-time motorcycle courier map tracking, and user profile orders.",
+    "tags": [
+      "Figma UI/UX",
+      "Android App Design",
+      "Food Delivery",
+      "Mobile Design",
+      "Figma Prototype"
+    ],
+    "projectLink": "https://github.com/hassan123550/Food-App",
+    "posterImg": "/assets/images/food_app_screen1.jpg",
+    "images": [
+      "/assets/images/food_app_screen1.jpg",
+      "/assets/images/food_app_screen2.jpg",
+      "/assets/images/food_app_screen3.jpg",
+      "/assets/images/food_app_screen4.jpg",
+      "/assets/images/food_app_screen5.jpg"
+    ],
+    "highlights": [
+      "5 Detailed Figma Food Delivery Mobile UI Screens",
+      "Interactive dish size & extra toppings customization",
+      "Shopping cart checkout summary & discount promo UI",
+      "Live courier route tracking map with ETA counter"
+    ]
+  },
+  {
+    "id": "meter-reading-ui",
+    "title": "Meter Reading UI/UX - Mobile App Design",
+    "category": "UI/UX Mobile",
+    "categoryFilter": "uiux",
+    "subtitle": "Figma Android Mobile UI/UX Design for Smart Utility Meter Reading",
+    "description": "Futuristic smart utility meter reading mobile application UI/UX design created in Figma. Features AI/OCR camera meter scanner, real-time consumption telemetry analytics charts, digital utility tariff bill payment breakdown, and technician inspection logs.",
+    "tags": [
+      "Figma UI/UX",
+      "Android App Design",
+      "Smart Utility",
+      "OCR Scanner UI",
+      "Figma Prototype"
+    ],
+    "posterImg": "/assets/images/meter_app_screen1.jpg",
+    "images": [
+      "/assets/images/meter_app_screen1.jpg",
+      "/assets/images/meter_app_screen2.jpg",
+      "/assets/images/meter_app_screen3.jpg",
+      "/assets/images/Screenshot_from_2026-07-22_15-20-04.png",
+      "/assets/images/Screenshot_from_2026-07-22_15-20-56.png"
+    ],
+    "highlights": [
+      "5 Custom Figma Smart Meter Mobile App Screens",
+      "Camera OCR meter scanner viewfinder UI",
+      "Interactive kWh consumption telemetry graphs",
+      "Slab tariff billing & instant mobile payment flow"
+    ]
+  },
+  {
     "id": "iot-web-dashboard",
     "title": "IoT Smart Web Analytics Dashboard UI",
     "category": "UI/UX Web",
@@ -162,54 +250,6 @@ export const projectsData = [
       "Real-time data visualization charts",
       "Device status telemetry tables",
       "Responsive desktop interface"
-    ]
-  },
-  {
-    "id": "voyage-travel-app-ui",
-    "title": "Voyage - Travel & Booking Mobile App UI",
-    "category": "UI/UX Mobile",
-    "categoryFilter": "uiux",
-    "subtitle": "Sleek Destination & Flight Booking Mobile UI/UX Design",
-    "description": "A premium mobile application UI design for travel exploration and flight booking. Features glassmorphic cards, destination discovery carousels, dark mode styling, and smooth interaction states.",
-    "tags": [
-      "React Native CLI",
-      "UI/UX Design",
-      "Figma Prototype",
-      "Mobile Layout"
-    ],
-    "posterImg": "/assets/images/travel_app_ui.jpg",
-    "images": [
-      "/assets/images/travel_app_ui.jpg"
-    ],
-    "highlights": [
-      "Modern glassmorphic mobile UI design",
-      "Interactive destination search & filtering",
-      "Flight deal booking cards",
-      "Clean dark-themed design system"
-    ]
-  },
-  {
-    "id": "finance-one-banking-ui",
-    "title": "Finance One - Smart Banking & Wallet UI",
-    "category": "UI/UX Mobile",
-    "categoryFilter": "uiux",
-    "subtitle": "Fintech Analytics & Digital Credit Card Mobile UI/UX",
-    "description": "Modern fintech mobile UI/UX design featuring spending analytics graphs, digital card wallet views, quick transaction actions, and futuristic cyan glow aesthetics.",
-    "tags": [
-      "React Native CLI",
-      "UI/UX Design",
-      "Fintech UI",
-      "Mobile Charts"
-    ],
-    "posterImg": "/assets/images/fintech_app_ui.jpg",
-    "images": [
-      "/assets/images/fintech_app_ui.jpg"
-    ],
-    "highlights": [
-      "Financial spending telemetry charts",
-      "Digital credit card wallet interface",
-      "Quick action payment buttons",
-      "Obsidian & neon cyan visual style"
     ]
   }
 ];

@@ -5,7 +5,7 @@ const Hero = ({ onOpenCV }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <section id="home" className="pt-20 pb-8 sm:pt-24 sm:pb-12 lg:pt-36 lg:pb-24 relative overflow-hidden bg-zinc-950">
+    <section id="home" className="pt-28 pb-8 sm:pt-32 sm:pb-12 lg:pt-36 lg:pb-24 relative overflow-hidden bg-zinc-950">
       {/* Background Gradient Accents */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-cyan-500/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
       <div className="absolute top-1/3 right-10 w-[350px] h-[350px] bg-emerald-500/10 rounded-full blur-[100px] -z-10 pointer-events-none"></div>

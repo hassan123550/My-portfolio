@@ -34,13 +34,13 @@ const Hero = ({ onOpenCV }) => {
               </span>
               <br />
               <span className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-zinc-200">
-                Specialized in React Native CLI, Firebase, REST APIs, Git & GitHub
+                Specialized in React Native CLI, Firebase, Context API, REST APIs, Git & GitHub
               </span>
             </h1>
 
             {/* Bio Paragraph */}
             <p className="text-zinc-400 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl">
-              Engineering high-performance mobile applications using <span className="text-cyan-300 font-semibold">React Native CLI</span>, real-time cloud backends with <span className="text-amber-400 font-semibold">Firebase</span> (Auth & Firestore), state management with <span className="text-purple-400 font-semibold">Redux Toolkit</span>, scalable <span className="text-emerald-300 font-semibold">REST APIs</span> <span className="text-orange-400 font-semibold">Git</span> version control & <span className="text-zinc-200 font-semibold">GitHub</span> online platform for repository publishing.
+              Engineering high-performance mobile applications using <span className="text-cyan-300 font-semibold">React Native CLI</span>, real-time cloud backends with <span className="text-amber-400 font-semibold">Firebase</span> (Auth & Firestore), state management with <span className="text-purple-400 font-semibold">Redux Toolkit</span> & <span className="text-cyan-400 font-semibold">Context API</span>, scalable <span className="text-emerald-300 font-semibold">REST APIs</span> <span className="text-orange-400 font-semibold">Git</span> version control & <span className="text-zinc-200 font-semibold">GitHub</span> online platform for repository publishing.
             </p>
 
             {/* Call To Action Buttons */}

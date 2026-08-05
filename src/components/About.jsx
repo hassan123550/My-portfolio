@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGraduationCap, FaCode } from 'react-icons/fa';
-import { SiFirebase, SiRedux, SiGit } from 'react-icons/si';
+import { SiFirebase, SiRedux, SiGit, SiReact } from 'react-icons/si';
 import { HiCode, HiDeviceMobile } from 'react-icons/hi';
 
 const About = () => {
@@ -31,11 +31,11 @@ const About = () => {
             {/* Bio Text */}
             <div className="lg:col-span-7 space-y-4">
               <p className="text-zinc-200 text-base sm:text-lg leading-relaxed">
-                I am <strong className="text-white font-bold">Hassan Ali</strong>, a passionate <span className="text-cyan-400 font-bold">React Native CLI</span>, <span className="text-amber-400 font-bold">Firebase</span>, and <span className="text-emerald-400 font-bold">REST API Developer</span> focused on building high-performance, cross-platform mobile apps and dynamic web applications.
+                I am <strong className="text-white font-bold">Hassan Ali</strong>, a passionate <span className="text-cyan-400 font-bold">React Native CLI</span>, <span className="text-amber-400 font-bold">Firebase</span>, <span className="text-cyan-400 font-bold">Context API</span>, and <span className="text-emerald-400 font-bold">REST API Developer</span> focused on building high-performance, cross-platform mobile apps and dynamic web applications.
               </p>
               
               <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
-                With expertise in React Native Community packages, real-time backend infrastructure with <span className="text-amber-400 font-semibold">Firebase</span> (Authentication & Firestore), state management with <span className="text-purple-400 font-semibold">Redux Toolkit</span>, and robust <span className="text-zinc-200 font-medium">RESTful API integration</span>, I have successfully delivered <strong className="text-white">5+ completed production projects</strong>.
+                With expertise in React Native Community packages, real-time backend infrastructure with <span className="text-amber-400 font-semibold">Firebase</span> (Authentication & Firestore), state management with <span className="text-purple-400 font-semibold">Redux Toolkit</span> & <span className="text-cyan-400 font-semibold">Context API</span>, and robust <span className="text-zinc-200 font-medium">RESTful API integration</span>.
               </p>
 
               {/* Skill Highlights Pills */}
@@ -47,7 +47,7 @@ const About = () => {
                   <SiFirebase className="text-sm text-amber-400" /> Firebase Auth & Firestore
                 </span>
                 <span className="px-3.5 py-1.5 rounded-xl bg-zinc-900 border border-zinc-800 text-purple-300 text-xs font-semibold flex items-center gap-1.5">
-                  <SiRedux className="text-sm text-purple-400" /> Redux Toolkit
+                  <SiRedux className="text-sm text-purple-400" /> Redux Toolkit & Context API
                 </span>
                 <span className="px-3.5 py-1.5 rounded-xl bg-zinc-900 border border-zinc-800 text-emerald-300 text-xs font-semibold flex items-center gap-1.5">
                   <HiCode className="text-sm text-emerald-400" /> REST API Integration

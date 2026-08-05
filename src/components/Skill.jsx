@@ -15,6 +15,7 @@ const Skill = () => {
     { icon: TbBrandReactNative, label: 'React Native CLI', desc: 'Native Community Modules', category: 'mobile', colorClass: 'text-cyan-400', bgClass: 'bg-cyan-500/10 border-cyan-500/20' },
     { icon: SiFirebase, label: 'Firebase Auth & DB', desc: 'Authentication & Firestore', category: 'mobile', colorClass: 'text-amber-400', bgClass: 'bg-amber-500/10 border-amber-500/20' },
     { icon: SiRedux, label: 'Redux Toolkit', desc: 'Global State Management', category: 'mobile', colorClass: 'text-purple-400', bgClass: 'bg-purple-500/10 border-purple-500/20' },
+    { icon: SiReact, label: 'Context API', desc: 'React State Management', category: 'mobile', colorClass: 'text-cyan-400', bgClass: 'bg-cyan-500/10 border-cyan-500/20' },
     { icon: SiJavascript, label: 'JavaScript ES6+', desc: 'Mobile & Web Application Logic', category: 'mobile', colorClass: 'text-yellow-400', bgClass: 'bg-yellow-500/10 border-yellow-500/20' },
 
     // Frontend Development

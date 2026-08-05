@@ -65,7 +65,7 @@ const Preloader = () => {
             Hassan Ali
           </h2>
           <p className="text-sm sm:text-base text-cyan-400 font-bold tracking-wider uppercase mt-1.5">
-            React Native & REST API Developer
+            React Native, Context API & REST API Developer
           </p>
           
           {/* Loading Dots animation */}

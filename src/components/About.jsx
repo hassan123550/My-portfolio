@@ -6,9 +6,8 @@ import { HiCode, HiDeviceMobile } from 'react-icons/hi';
 const About = () => {
   const stats = [
     { label: 'Completed Projects', value: '5+' },
-    { label: 'Years Experience', value: '1.5+' },
-    { label: 'Mobile Apps Built', value: '5+' },
-    { label: 'Client Satisfaction', value: '100%' }
+    { label: 'Years Experience', value: '1+' },
+    { label: 'Mobile Apps Built', value: '5+' }
   ];
 
   return (
@@ -78,7 +77,7 @@ const About = () => {
           </div>
 
           {/* Stats Divider Grid */}
-          <div className="mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-zinc-800/80 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center sm:text-left">
+          <div className="mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-zinc-800/80 grid grid-cols-3 gap-4 sm:gap-6 text-center sm:text-left">
             {stats.map(({ label, value }, idx) => (
               <div key={idx} className="py-2">
                 <div className="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
